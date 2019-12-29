@@ -6,4 +6,3 @@ const bootstrap = async () => {
     await app.listen(3100)
 }
 bootstrap()
-console.log('123')

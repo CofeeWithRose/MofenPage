@@ -10,15 +10,15 @@ export default class UserController{
         private readonly userService: UserService
     ){}
 
-    @Post('regist')
-    regist(@Body() user: User){
-        const data =  this.userService.regist(user)
+    @Get('regist')
+    async regist(@Body() user: User){
+        const data = await this.userService.regist(user)
         return new ServerResponse(1, data)
     }
 
     @Get('login')
-    login(@Body() user: User){
-        const data = this.userService.login(user)
+    async login(@Body() user: User){
+        const data = await this.userService.login(user)
         return new ServerResponse(1,data)
     }
 

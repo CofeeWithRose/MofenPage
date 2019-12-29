@@ -1,7 +1,5 @@
-export default interface User{
+import UserDto from "../dto/user.entity";
 
-    username: string;
+type User = Pick<UserDto, 'pwd'|'userName'>
 
-    pwd: string;
-
-}
+export default User
